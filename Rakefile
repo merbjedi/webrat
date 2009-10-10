@@ -29,6 +29,7 @@ Most Ruby web frameworks and testing frameworks are supported.
     # Dependencies
     s.add_dependency "nokogiri", ">= 1.2.0"
     s.add_dependency "rack", ">= 1.0"
+    s.add_dependency "rack-test", ">= 0.5"
 
     s.add_development_dependency "rails", ">= 2.3"
     s.add_development_dependency "merb-core", ">= 1.0"

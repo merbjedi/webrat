@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{webrat}
-  s.version = "0.6.rc1"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bryan Helmkamp"]
-  s.date = %q{2009-09-22}
+  s.date = %q{2009-10-10}
   s.description = %q{Webrat lets you quickly write expressive and robust acceptance tests
 for a Ruby web application. It supports simulating a browser inside
 a Ruby process to avoid the performance hit and browser dependency of
@@ -76,7 +76,6 @@ Most Ruby web frameworks and testing frameworks are supported.}
      "lib/webrat/core_extensions/meta_class.rb",
      "lib/webrat/core_extensions/nil_to_param.rb",
      "lib/webrat/core_extensions/tcp_socket.rb",
-     "lib/webrat/integrations/merb.rb",
      "lib/webrat/integrations/rails.rb",
      "lib/webrat/integrations/rspec-rails.rb",
      "lib/webrat/integrations/selenium.rb",
@@ -340,12 +339,14 @@ Most Ruby web frameworks and testing frameworks are supported.}
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<nokogiri>, [">= 1.2.0"])
       s.add_runtime_dependency(%q<rack>, [">= 1.0"])
+      s.add_runtime_dependency(%q<rack-test>, [">= 0.5"])
       s.add_development_dependency(%q<rails>, [">= 2.3"])
       s.add_development_dependency(%q<merb-core>, [">= 1.0"])
       s.add_development_dependency(%q<launchy>, [">= 0"])
     else
       s.add_dependency(%q<nokogiri>, [">= 1.2.0"])
       s.add_dependency(%q<rack>, [">= 1.0"])
+      s.add_dependency(%q<rack-test>, [">= 0.5"])
       s.add_dependency(%q<rails>, [">= 2.3"])
       s.add_dependency(%q<merb-core>, [">= 1.0"])
       s.add_dependency(%q<launchy>, [">= 0"])
@@ -353,6 +354,7 @@ Most Ruby web frameworks and testing frameworks are supported.}
   else
     s.add_dependency(%q<nokogiri>, [">= 1.2.0"])
     s.add_dependency(%q<rack>, [">= 1.0"])
+    s.add_dependency(%q<rack-test>, [">= 0.5"])
     s.add_dependency(%q<rails>, [">= 2.3"])
     s.add_dependency(%q<merb-core>, [">= 1.0"])
     s.add_dependency(%q<launchy>, [">= 0"])
